@@ -10,7 +10,7 @@ const Hero = () => (
       <div className="max-w-2xl animate-fade-in-up">
         <p className="text-primary-foreground/80 font-medium mb-3 tracking-wide uppercase text-sm">Vancouver's Trusted Exterior Cleaning Pros</p>
         <h1 className="font-serif text-4xl md:text-6xl font-bold text-primary-foreground leading-tight mb-6">
-          Roof Moss Removal &amp; Exterior Cleaning in Surrey
+          Roof Moss Removal &amp; Exterior Cleaning in Greater Vancouver
         </h1>
         <p className="text-primary-foreground/80 text-lg mb-8 max-w-lg">
           Safe, affordable, and reliable service with free quotes. We keep your home looking its best — from roof to curb.
