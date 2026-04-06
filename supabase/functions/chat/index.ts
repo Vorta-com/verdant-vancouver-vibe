@@ -21,7 +21,7 @@ BUSINESS DETAILS:
 - Fully insured
 - Fast response time — usually same-day estimates
 - Phone: (604) 555-1234
-- Email: info@sparkletop.ca
+- Email: info@apexexterior.ca
 
 INSTRUCTIONS:
 - Be friendly, helpful, and professional. Keep answers concise (2-3 sentences when possible).
