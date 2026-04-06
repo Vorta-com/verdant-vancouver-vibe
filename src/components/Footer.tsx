@@ -3,7 +3,7 @@ const Footer = () => (
     <div className="container">
       <div className="grid sm:grid-cols-3 gap-8 mb-8">
         <div>
-          <h3 className="font-serif text-xl font-bold mb-3">SparkleTop<span className="text-accent">.</span></h3>
+          <h3 className="font-serif text-xl font-bold mb-3">Apex<span className="text-accent"> Exterior Solutions</span></h3>
           <p className="text-primary-foreground/70 text-sm">Professional exterior cleaning and moss removal for homes across Surrey and Greater Vancouver.</p>
         </div>
         <div>
@@ -22,7 +22,7 @@ const Footer = () => (
         </div>
       </div>
       <div className="border-t border-primary-foreground/20 pt-6 text-center text-sm text-primary-foreground/50">
-        © {new Date().getFullYear()} SparkleTop. All rights reserved.
+        © {new Date().getFullYear()} Apex Exterior Solutions. All rights reserved.
       </div>
     </div>
   </footer>
