@@ -1,3 +1,5 @@
+import logo from "@/assets/logo_AES.png";
+
 const Footer = () => (
   <footer className="bg-primary text-primary-foreground py-12">
     <div className="container">
