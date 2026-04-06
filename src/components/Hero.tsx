@@ -8,7 +8,7 @@ const Hero = () => (
     <div className="absolute inset-0" style={{ background: "var(--hero-overlay)" }} />
     <div className="container relative z-10 py-20">
       <div className="max-w-2xl animate-fade-in-up">
-        <p className="text-primary-foreground/80 font-medium mb-3 tracking-wide uppercase text-sm">Surrey's Trusted Exterior Cleaning Pros</p>
+        <p className="text-primary-foreground/80 font-medium mb-3 tracking-wide uppercase text-sm">Vancouver's Trusted Exterior Cleaning Pros</p>
         <h1 className="font-serif text-4xl md:text-6xl font-bold text-primary-foreground leading-tight mb-6">
           Roof Moss Removal &amp; Exterior Cleaning in Surrey
         </h1>
