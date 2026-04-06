@@ -1,9 +1,11 @@
+import logo from "@/assets/logo_AES.png";
+
 const Footer = () => (
   <footer className="bg-primary text-primary-foreground py-12">
     <div className="container">
       <div className="grid sm:grid-cols-3 gap-8 mb-8">
         <div>
-          <h3 className="font-serif text-xl font-bold mb-3">Apex<span className="text-accent"> Exterior Solutions</span></h3>
+          <img src={logo} alt="Apex Exterior Solutions" className="h-12 mb-3" />
           <p className="text-primary-foreground/70 text-sm">Professional exterior cleaning and moss removal for homes across Surrey and Greater Vancouver.</p>
         </div>
         <div>
