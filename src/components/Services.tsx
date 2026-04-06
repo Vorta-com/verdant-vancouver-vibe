@@ -1,11 +1,11 @@
-import { Home, Droplets, TreePine, Shield } from "lucide-react";
+import { Home, Droplets, Waves, Sparkles } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
 const services = [
-  { icon: Home, title: "Roof Moss Removal", desc: "Gentle hand-scraping and soft-wash treatment that removes moss without damaging your shingles." },
-  { icon: Droplets, title: "Driveway & Patio Cleaning", desc: "High-pressure and soft-wash cleaning to restore concrete, pavers, and stone surfaces." },
-  { icon: TreePine, title: "Gutter & Downspout Cleaning", desc: "Clear debris and moss buildup to ensure proper drainage and prevent water damage." },
-  { icon: Shield, title: "Moss Prevention Treatment", desc: "Zinc-based treatments that keep moss from growing back for up to 3 years." },
+  { icon: Home, title: "Roof Moss Removal", desc: "Gentle soft wash treatment that safely removes moss and algae without damaging your shingles. Extends your roof's lifespan." },
+  { icon: Droplets, title: "Gutter Cleaning", desc: "Clear out leaves, debris, and moss buildup so your gutters drain properly and protect your home from water damage." },
+  { icon: Waves, title: "Driveway & Patio Pressure Washing", desc: "Restore your concrete, pavers, and stone surfaces to like-new condition. Remove oil stains, algae, and grime." },
+  { icon: Sparkles, title: "House Exterior Soft Washing", desc: "Low-pressure cleaning that safely removes dirt, mildew, and stains from siding, stucco, and brick — no damage, just results." },
 ];
 
 const Services = () => (
@@ -14,7 +14,7 @@ const Services = () => (
       <div className="text-center max-w-2xl mx-auto mb-14">
         <p className="text-accent font-semibold text-sm uppercase tracking-wide mb-2">What We Do</p>
         <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">Our Services</h2>
-        <p className="text-muted-foreground">From roof to curb, we keep your property moss-free and looking its best.</p>
+        <p className="text-muted-foreground">Professional exterior cleaning for every surface of your home.</p>
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {services.map((s) => (
