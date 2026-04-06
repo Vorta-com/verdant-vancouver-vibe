@@ -6,7 +6,7 @@ const Footer = () => (
       <div className="grid sm:grid-cols-3 gap-8 mb-8">
         <div>
           <div className="rounded-lg inline-block mb-3">
-            <img src={logo} alt="Apex Exterior Solutions" className="h-12 w-auto brightness-0 invert" />
+            <img src={logo} alt="Apex Exterior Solutions" className="h-16 w-auto brightness-0 invert" />
           </div>
           <p className="text-primary-foreground/70 text-sm">Professional exterior cleaning and moss removal for homes across Surrey and Greater Vancouver.</p>
         </div>
