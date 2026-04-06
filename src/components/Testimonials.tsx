@@ -2,9 +2,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
 
 const testimonials = [
-  { name: "Sarah M.", location: "North Vancouver", text: "They transformed our 20-year-old roof! Looks brand new and the moss prevention treatment gives us peace of mind." },
-  { name: "James T.", location: "Burnaby", text: "Professional, on time, and very reasonable pricing. Our neighbours couldn't believe the difference. Highly recommend!" },
-  { name: "Linda K.", location: "West Vancouver", text: "We tried pressure washing ourselves but they showed us the right way. Gentle on the roof and incredibly thorough." },
+  { name: "Sarah M.", location: "Surrey", text: "They did an amazing job on our roof! The moss was terrible and now it looks brand new. Very professional and on time." },
+  { name: "James T.", location: "Burnaby", text: "I sent a photo and got a quote within an hour. The driveway pressure washing was incredible — our neighbours couldn't believe the difference!" },
+  { name: "Linda K.", location: "Coquitlam", text: "Friendly, honest, and affordable. They cleaned our gutters and soft-washed the entire house exterior. Highly recommend to anyone in the Lower Mainland." },
+  { name: "David R.", location: "New Westminster", text: "We've used them twice now — roof moss removal and driveway cleaning. Always great results and fair pricing. Will definitely call again." },
+  { name: "Priya S.", location: "Vancouver", text: "Super responsive and the before/after results speak for themselves. Our house looks like it just got a fresh coat of paint!" },
 ];
 
 const Testimonials = () => (
@@ -15,7 +17,23 @@ const Testimonials = () => (
         <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">What Our Customers Say</h2>
       </div>
       <div className="grid md:grid-cols-3 gap-6">
-        {testimonials.map((t) => (
+        {testimonials.slice(0, 3).map((t) => (
+          <Card key={t.name} className="border-border/60">
+            <CardContent className="pt-6">
+              <div className="flex gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-4 w-4 fill-accent text-accent" />
+                ))}
+              </div>
+              <p className="text-foreground mb-4 italic">"{t.text}"</p>
+              <p className="text-sm font-semibold text-foreground">{t.name}</p>
+              <p className="text-xs text-muted-foreground">{t.location}</p>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+      <div className="grid md:grid-cols-2 gap-6 mt-6 max-w-3xl mx-auto">
+        {testimonials.slice(3).map((t) => (
           <Card key={t.name} className="border-border/60">
             <CardContent className="pt-6">
               <div className="flex gap-1 mb-4">
