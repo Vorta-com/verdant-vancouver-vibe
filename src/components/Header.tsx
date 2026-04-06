@@ -17,7 +17,7 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-b">
       <div className="container flex items-center justify-between h-16">
         <a href="#" className="font-serif text-xl font-bold text-primary">
-          SparkleTop<span className="text-accent">.</span>
+          Apex<span className="text-accent"> Exterior Solutions</span>
         </a>
 
         <nav className="hidden md:flex items-center gap-8">

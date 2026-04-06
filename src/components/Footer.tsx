@@ -22,7 +22,7 @@ const Footer = () => (
         </div>
       </div>
       <div className="border-t border-primary-foreground/20 pt-6 text-center text-sm text-primary-foreground/50">
-        © {new Date().getFullYear()} SparkleTop. All rights reserved.
+        © {new Date().getFullYear()} Apex Exterior Solutions. All rights reserved.
       </div>
     </div>
   </footer>
