@@ -22,7 +22,7 @@ const Footer = () => (
         </div>
         <div>
           <h4 className="font-serif font-semibold mb-3">Service Areas</h4>
-          <p className="text-sm text-primary-foreground/70">Surrey · Burnaby · Coquitlam · New Westminster · Vancouver</p>
+          <p className="text-sm text-primary-foreground/70">Surrey · Burnaby · Coquitlam · Maple Ridge · New Westminster · Vancouver</p>
         </div>
       </div>
       <div className="border-t border-primary-foreground/20 pt-6 text-center text-sm text-primary-foreground/50">

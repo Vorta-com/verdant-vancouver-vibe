@@ -27,8 +27,8 @@ const Header = () => {
             </a>
           ))}
           <Button asChild>
-            <a href="tel:+16045551234" className="gap-2">
-              <Phone className="h-4 w-4" /> (604) 555-1234
+            <a href="tel:+17785583384" className="gap-2">
+              <Phone className="h-4 w-4" /> (778) 558-3384
             </a>
           </Button>
         </nav>
@@ -46,8 +46,8 @@ const Header = () => {
             </a>
           ))}
           <Button asChild className="w-full">
-            <a href="tel:+16045551234" className="gap-2">
-              <Phone className="h-4 w-4" /> (604) 555-1234
+            <a href="tel:+17785583384" className="gap-2">
+              <Phone className="h-4 w-4" /> (778) 558-3384
             </a>
           </Button>
         </nav>
