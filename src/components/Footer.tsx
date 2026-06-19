@@ -1,4 +1,4 @@
-import logo from "@/assets/logo_AES_transparent.png";
+import logoAsset from "@/assets/cresta-logo.png.asset.json";
 
 const Footer = () => (
   <footer className="bg-primary text-primary-foreground py-12">
@@ -6,7 +6,7 @@ const Footer = () => (
       <div className="grid sm:grid-cols-3 gap-8 mb-8">
         <div>
           <div className="rounded-lg inline-block mb-3">
-            <img src={logo} alt="Apex Exterior Solutions" className="h-16 w-auto brightness-0 invert" />
+            <img src={logoAsset.url} alt="Cresta Exterior Cleaning" className="h-16 w-auto brightness-0 invert" />
           </div>
           <p className="text-primary-foreground/70 text-sm">Professional exterior cleaning and moss removal for homes across Surrey and Greater Vancouver.</p>
         </div>
@@ -26,7 +26,7 @@ const Footer = () => (
         </div>
       </div>
       <div className="border-t border-primary-foreground/20 pt-6 text-center text-sm text-primary-foreground/50">
-        © {new Date().getFullYear()} Apex Exterior Solutions. All rights reserved.
+        © {new Date().getFullYear()} Cresta Exterior Cleaning. All rights reserved.
       </div>
     </div>
   </footer>
