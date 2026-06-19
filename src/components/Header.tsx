@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoAsset from "@/assets/cresta-logo.png.asset.json";
+import logoAsset from "@/assets/cresta-logo-transparent.png.asset.json";
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
