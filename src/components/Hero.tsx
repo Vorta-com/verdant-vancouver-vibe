@@ -19,7 +19,7 @@ const Hero = () => (
           <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-base px-8" asChild>
             <a href="#contact">Get a Free Quote <ArrowRight className="ml-2 h-5 w-5" /></a>
           </Button>
-          <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-base px-8" asChild>
+          <Button size="lg" variant="outline" className="border-2 border-primary-foreground bg-primary-foreground/10 text-primary-foreground backdrop-blur-sm hover:bg-primary-foreground hover:text-primary text-base px-8" asChild>
             <a href="tel:+17785583384"><Phone className="mr-2 h-5 w-5" /> Call Now</a>
           </Button>
         </div>
