@@ -1,13 +1,11 @@
-import logoAsset from "@/assets/cresta-logo.png.asset.json";
+import logoAsset from "@/assets/cresta-logo-transparent.png.asset.json";
 
 const Footer = () => (
   <footer className="bg-primary text-primary-foreground py-12">
     <div className="container">
       <div className="grid sm:grid-cols-3 gap-8 mb-8">
         <div>
-          <div className="rounded-lg inline-block mb-3">
-            <img src={logoAsset.url} alt="Cresta Exterior Cleaning" className="h-16 w-auto brightness-0 invert" />
-          </div>
+          <img src={logoAsset.url} alt="Cresta Exterior Cleaning" className="h-20 w-auto mb-3 brightness-0 invert" />
           <p className="text-primary-foreground/70 text-sm">Professional exterior cleaning and moss removal for homes across Surrey and Greater Vancouver.</p>
         </div>
         <div>
