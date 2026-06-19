@@ -44,7 +44,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Email</p>
-                  <a href="mailto:info@apexexterior.ca" className="font-medium text-foreground hover:text-primary transition-colors">info@apexexterior.ca</a>
+                  <a href="mailto:info@crestaexterior.ca" className="font-medium text-foreground hover:text-primary transition-colors">info@crestaexterior.ca</a>
                 </div>
               </div>
               <div className="flex items-center gap-4">

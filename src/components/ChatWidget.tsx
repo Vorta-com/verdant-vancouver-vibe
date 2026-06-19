@@ -10,7 +10,7 @@ const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/chat`;
 const ChatWidget = () => {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Msg[]>([
-    { role: "assistant", content: "Hi there! 👋 I'm the Apex Exterior Solutions virtual assistant. How can I help you today? Ask me about our services, pricing, or request a free quote!" },
+    { role: "assistant", content: "Hi there! 👋 I'm the Cresta Exterior Cleaning virtual assistant. How can I help you today? Ask me about our services, pricing, or request a free quote!" },
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
