@@ -1,4 +1,6 @@
 import { CheckCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Phone, ShieldCheck, Leaf, Clock } from "lucide-react";
 
 const reasons = [
   "Locally based in Surrey, BC",
@@ -30,19 +32,28 @@ const WhyUs = () => (
             ))}
           </ul>
         </div>
-        <div className="bg-primary/5 rounded-2xl p-10 text-center">
-          <div className="text-6xl font-serif font-bold text-primary mb-2">500+</div>
-          <p className="text-muted-foreground mb-6">Homes cleaned across Surrey &amp; Vancouver</p>
-          <div className="grid grid-cols-2 gap-6">
-            <div>
-              <div className="text-3xl font-serif font-bold text-foreground">4.9★</div>
-              <p className="text-sm text-muted-foreground">Google Rating</p>
+        <div className="bg-primary/5 rounded-2xl p-10">
+          <h3 className="font-serif text-2xl font-bold text-foreground mb-2">Our Promise to You</h3>
+          <p className="text-muted-foreground mb-6">A new local business built on quality work, honest pricing, and same-day quotes.</p>
+          <div className="space-y-4 mb-8">
+            <div className="flex items-start gap-3">
+              <ShieldCheck className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+              <span className="text-foreground">Fully insured &amp; safe methods</span>
             </div>
-            <div>
-              <div className="text-3xl font-serif font-bold text-foreground">100%</div>
-              <p className="text-sm text-muted-foreground">Satisfaction</p>
+            <div className="flex items-start gap-3">
+              <Clock className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+              <span className="text-foreground">Same-day free quotes</span>
+            </div>
+            <div className="flex items-start gap-3">
+              <Leaf className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+              <span className="text-foreground">Eco-friendly cleaning products</span>
             </div>
           </div>
+          <Button asChild className="w-full" size="lg">
+            <a href="tel:+17785583384" className="gap-2">
+              <Phone className="h-4 w-4" /> (778) 558-3384
+            </a>
+          </Button>
         </div>
       </div>
     </div>
