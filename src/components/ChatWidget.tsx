@@ -85,7 +85,7 @@ const ChatWidget = () => {
     } catch (e) {
       setMessages((prev) => [
         ...prev,
-        { role: "assistant", content: "Sorry, I'm having trouble connecting. Please call us at **(604) 555-1234** or fill out the quote form above!" },
+        { role: "assistant", content: "Sorry, I'm having trouble connecting. Please call us at **(778) 558-3384** or fill out the quote form above!" },
       ]);
     } finally {
       setLoading(false);

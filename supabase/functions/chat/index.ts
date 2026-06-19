@@ -20,7 +20,7 @@ BUSINESS DETAILS:
 - Free quotes available — customers can send a photo for fast pricing
 - Fully insured
 - Fast response time — usually same-day estimates
-- Phone: (604) 555-1234
+- Phone: (778) 558-3384
 - Email: info@crestaexterior.ca
 
 INSTRUCTIONS:
@@ -74,7 +74,7 @@ serve(async (req) => {
         });
       }
       if (response.status === 402) {
-        return new Response(JSON.stringify({ error: "AI service temporarily unavailable. Please call us at (604) 555-1234." }), {
+        return new Response(JSON.stringify({ error: "AI service temporarily unavailable. Please call us at (778) 558-3384." }), {
           status: 402,
           headers: { ...corsHeaders, "Content-Type": "application/json" },
         });
