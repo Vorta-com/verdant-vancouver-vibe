@@ -111,7 +111,7 @@ const ChatWidget = () => {
           {/* Header */}
           <div className="flex items-center justify-between px-4 py-3 bg-primary text-primary-foreground">
             <div>
-              <p className="font-serif font-bold text-sm">Apex Assistant</p>
+              <p className="font-serif font-bold text-sm">Cresta Assistant</p>
               <p className="text-xs opacity-80">Ask about services & pricing</p>
             </div>
             <button onClick={() => setOpen(false)} aria-label="Close chat">
