@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, ShieldCheck, Leaf, Clock } from "lucide-react";
 
 const reasons = [
-  "Locally based in Surrey, BC",
+  "Locally based in Greater Vancouver, BC",
   "Fast response time — usually within 24 hours",
   "Free quotes — just send us a photo for pricing",
   "Fully insured for your peace of mind",
@@ -18,7 +18,7 @@ const WhyUs = () => (
         <div>
           <p className="text-accent font-semibold text-sm uppercase tracking-wide mb-2">Why Choose Us</p>
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Surrey's Most Trusted Exterior Cleaning Team
+            Greater Vancouver's Most Trusted Exterior Cleaning Team
           </h2>
           <p className="text-muted-foreground mb-8">
             We're your local neighbours — we know the Lower Mainland weather and what it does to your home. Our experienced crew delivers spotless results every time.
