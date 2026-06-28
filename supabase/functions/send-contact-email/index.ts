@@ -120,7 +120,7 @@ serve(async (req) => {
 
     const raw = encodeBase64Url(rawEmail);
 
-    const response = await fetch("https://connector-gateway.lovable.dev/google_mail/users/me/messages/send", {
+    const response = await fetch("https://connector-gateway.lovable.dev/google_mail/gmail/v1/users/me/messages/send", {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${LOVABLE_API_KEY}`,
