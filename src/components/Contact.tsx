@@ -1,21 +1,97 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+
+const MAX_PHOTO_MB = 5;
 
 const Contact = () => {
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
+  const [photoLabel, setPhotoLabel] = useState<string>("");
+  const photoRef = useRef<{ file: File | null; base64: string }>({ file: null, base64: "" });
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const readFileAsBase64 = (file: File): Promise<string> => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => {
+        const result = reader.result as string;
+        const base64 = result.split(",")[1] || "";
+        resolve(base64);
+      };
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+    });
+  };
+
+  const handlePhotoChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0] || null;
+    if (!file) {
+      photoRef.current = { file: null, base64: "" };
+      setPhotoLabel("");
+      return;
+    }
+
+    if (file.size > MAX_PHOTO_MB * 1024 * 1024) {
+      toast({ title: "Photo too large", description: `Please choose a photo under ${MAX_PHOTO_MB}MB.`, variant: "destructive" });
+      e.target.value = "";
+      return;
+    }
+
+    setPhotoLabel(file.name);
+    try {
+      const base64 = await readFileAsBase64(file);
+      photoRef.current = { file, base64 };
+    } catch {
+      toast({ title: "Photo error", description: "Could not read the photo. Please try again.", variant: "destructive" });
+      photoRef.current = { file: null, base64: "" };
+      setPhotoLabel("");
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
+
+    const formData = new FormData(e.currentTarget);
+    const name = String(formData.get("name") || "").trim();
+    const phone = String(formData.get("phone") || "").trim();
+    const email = String(formData.get("email") || "").trim();
+    const address = String(formData.get("address") || "").trim();
+    const notes = String(formData.get("notes") || "").trim();
+
+    const payload: Record<string, string> = { name, phone, email, address, notes };
+    if (photoRef.current.base64 && photoRef.current.file) {
+      payload.photoName = photoRef.current.file.name;
+      payload.photoMimeType = photoRef.current.file.type;
+      payload.photoBase64 = photoRef.current.base64;
+    }
+
+    try {
+      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+        body: payload,
+      });
+
+      if (error || !data?.success) {
+        throw new Error(error?.message || data?.error || "Failed to send request");
+      }
+
       toast({ title: "Quote request sent!", description: "We'll get back to you within 24 hours." });
       (e.target as HTMLFormElement).reset();
-    }, 1000);
+      photoRef.current = { file: null, base64: "" };
+      setPhotoLabel("");
+    } catch (err) {
+      toast({
+        title: "Something went wrong",
+        description: err instanceof Error ? err.message : "Please try again or call us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -60,12 +136,20 @@ const Contact = () => {
           </div>
 
           <form onSubmit={handleSubmit} className="bg-card rounded-2xl border p-8 space-y-5 shadow-sm">
-            <Input placeholder="Your name" required />
-            <Input type="tel" placeholder="Phone number" required />
-            <Input placeholder="Property address" required />
+            <Input name="name" placeholder="Your name" required />
+            <Input name="phone" type="tel" placeholder="Phone number" required />
+            <Input name="email" type="email" placeholder="Email address (optional)" />
+            <Input name="address" placeholder="Property address" required />
+            <Textarea name="notes" placeholder="Tell us about the work you need (optional)" rows={3} />
             <div>
               <label className="block text-sm font-medium text-foreground mb-2">Upload a photo (optional)</label>
-              <Input type="file" accept="image/*" className="cursor-pointer" />
+              <Input
+                type="file"
+                accept="image/*"
+                className="cursor-pointer"
+                onChange={handlePhotoChange}
+              />
+              {photoLabel && <p className="text-sm text-muted-foreground mt-1">{photoLabel}</p>}
             </div>
             <Button type="submit" className="w-full" size="lg" disabled={loading}>
               {loading ? "Sending..." : "Get My Free Quote"}
