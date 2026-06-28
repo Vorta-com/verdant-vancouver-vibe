@@ -4,7 +4,7 @@ import { ArrowRight, Phone } from "lucide-react";
 
 const Hero = () => (
   <section className="relative min-h-[90vh] flex items-center pt-20">
-    <img src={heroImg} alt="Before and after roof moss removal in Surrey BC" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
+    <img src={heroImg} alt="Before and after roof moss removal in Greater Vancouver" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
     <div className="absolute inset-0" style={{ background: "var(--hero-overlay)" }} />
     <div className="container relative z-10 py-20">
       <div className="max-w-2xl animate-fade-in-up">

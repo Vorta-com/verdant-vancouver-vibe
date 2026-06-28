@@ -6,7 +6,7 @@ const Footer = () => (
       <div className="grid sm:grid-cols-3 gap-8 mb-8">
         <div>
           <img src={logoAsset.url} alt="Cresta Exterior Cleaning" className="h-20 w-auto mb-3 brightness-0 invert" />
-          <p className="text-primary-foreground/70 text-sm">Professional exterior cleaning and moss removal for homes across Surrey and Greater Vancouver.</p>
+          <p className="text-primary-foreground/70 text-sm">Professional exterior cleaning and moss removal for homes across Greater Vancouver.</p>
         </div>
         <div>
           <h4 className="font-serif font-semibold mb-3">Quick Links</h4>
@@ -20,7 +20,7 @@ const Footer = () => (
         </div>
         <div>
           <h4 className="font-serif font-semibold mb-3">Service Areas</h4>
-          <p className="text-sm text-primary-foreground/70">Surrey · Burnaby · Coquitlam · Maple Ridge · New Westminster · Vancouver</p>
+          <p className="text-sm text-primary-foreground/70">Burnaby · Coquitlam · Maple Ridge · New Westminster · Vancouver</p>
         </div>
       </div>
       <div className="border-t border-primary-foreground/20 pt-6 text-center text-sm text-primary-foreground/50">

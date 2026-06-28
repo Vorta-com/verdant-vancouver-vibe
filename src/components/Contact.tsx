@@ -129,7 +129,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Service Area</p>
-                  <p className="font-medium text-foreground">Surrey &amp; Greater Vancouver</p>
+                  <p className="font-medium text-foreground">Greater Vancouver</p>
                 </div>
               </div>
             </div>
