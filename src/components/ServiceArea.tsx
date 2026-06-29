@@ -1,6 +1,6 @@
 import { MapPin } from "lucide-react";
 
-const areas = ["Burnaby", "Coquitlam", "Delta", "Langley", "Maple Ridge", "Mission", "New Westminster", "North Vancouver", "Pitt Meadows", "Port Coquitlam", "Port Moody", "Richmond", "Surrey", "Vancouver", "West Vancouver", "White Rock"];
+const areas = ["Burnaby", "Coquitlam", "Delta", "Langley", "Maple Ridge", "Mission", "New Westminster", "North Vancouver", "Pitt Meadows", "Port Coquitlam", "Port Moody", "Richmond", "Surrey", "Vancouver", "West Vancouver", "White Rock", "and more"];
 
 const ServiceArea = () => (
   <section id="service-area" className="py-20">
