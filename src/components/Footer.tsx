@@ -20,7 +20,7 @@ const Footer = () => (
         </div>
         <div>
           <h4 className="font-serif font-semibold mb-3">Service Areas</h4>
-          <p className="text-sm text-primary-foreground/70">Burnaby · Coquitlam · Delta · Langley · Maple Ridge · Mission · New Westminster · North Vancouver · Pitt Meadows · Port Coquitlam · Port Moody · Richmond · Surrey · Vancouver · West Vancouver · White Rock</p>
+          <p className="text-sm text-primary-foreground/70">Burnaby · Coquitlam · Delta · Langley · Maple Ridge · Mission · New Westminster · North Vancouver · Pitt Meadows · Port Coquitlam · Port Moody · Richmond · Surrey · Vancouver · West Vancouver · White Rock · and more</p>
         </div>
       </div>
       <div className="border-t border-primary-foreground/20 pt-6 text-center text-sm text-primary-foreground/50">
