@@ -14,7 +14,7 @@ SERVICES & PRICING GUIDANCE:
 - Driveway & Patio Pressure Washing — typical range $150–$400
 - House Exterior Soft Washing — typical range $250–$600
 
-SERVICE AREAS: Burnaby, Coquitlam, Delta, Langley, Maple Ridge, Mission, New Westminster, North Vancouver, Pitt Meadows, Port Coquitlam, Port Moody, Richmond, Vancouver, West Vancouver, White Rock
+SERVICE AREAS: Burnaby, Coquitlam, Delta, Langley, Maple Ridge, Mission, New Westminster, North Vancouver, Pitt Meadows, Port Coquitlam, Port Moody, Richmond, Surrey, Vancouver, West Vancouver, White Rock
 
 BUSINESS DETAILS:
 - Free quotes available — customers can send a photo for fast pricing
