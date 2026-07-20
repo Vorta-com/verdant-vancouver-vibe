@@ -41,19 +41,18 @@ const Vending = () => {
         </div>
       </header>
 
-      {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
         <div className="container grid md:grid-cols-2 gap-10 items-center py-16 md:py-24">
           <div>
             <span className="inline-block bg-accent text-accent-foreground text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
-              Free amenity for your business
+              Specialists in AI Vending Machines
             </span>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-              Got space for a <span className="text-accent">vending machine?</span>
+              Smart <span className="text-accent">AI vending machines</span> for your space
             </h1>
             <p className="text-lg md:text-xl opacity-90 mb-8">
-              I install and stock snack &amp; drink vending machines at{" "}
-              <span className="font-bold text-accent">NO COST</span> to you — a nice, easy perk for your staff or customers.
+              We specialize in next-generation <span className="font-bold text-accent">AI-powered vending machines</span> — installed and stocked at
+              <span className="font-bold text-accent"> NO COST</span> to you. Touchscreen ordering, cashless payments, and real-time inventory built in.
             </p>
             <div className="flex flex-wrap gap-3">
               <Button size="lg" variant="secondary" asChild>
@@ -74,7 +73,7 @@ const Vending = () => {
           <div className="relative">
             <img
               src={vendingHero}
-              alt="Modern vending machine in an office"
+              alt="Modern AI-powered smart vending machine in an office"
               className="rounded-2xl shadow-2xl w-full"
               width={1536}
               height={1024}
@@ -146,9 +145,10 @@ const Vending = () => {
           </div>
           <ul className="p-6 space-y-3">
             {[
-              "Convenient snacks & drinks for staff, customers, or tenants",
+              "Smart AI vending machines with touchscreen ordering",
+              "Cashless tap, chip, and mobile-wallet payments built in",
+              "Real-time inventory tracking — never a sold-out shelf",
               "Zero upfront cost and zero ongoing effort on your part",
-              "Modern card-reader machines, no cash handling required",
               "Locally owned and operated — based right here in Maple Ridge",
             ].map((t) => (
               <li key={t} className="flex gap-3 items-start">
