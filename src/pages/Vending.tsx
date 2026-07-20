@@ -73,7 +73,7 @@ const Vending = () => {
           <div className="relative">
             <img
               src={vendingHero}
-              alt="Modern vending machine in an office"
+              alt="Modern AI-powered smart vending machine in an office"
               className="rounded-2xl shadow-2xl w-full"
               width={1536}
               height={1024}
