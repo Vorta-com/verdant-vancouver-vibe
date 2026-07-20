@@ -145,9 +145,10 @@ const Vending = () => {
           </div>
           <ul className="p-6 space-y-3">
             {[
-              "Convenient snacks & drinks for staff, customers, or tenants",
+              "Smart AI vending machines with touchscreen ordering",
+              "Cashless tap, chip, and mobile-wallet payments built in",
+              "Real-time inventory tracking — never a sold-out shelf",
               "Zero upfront cost and zero ongoing effort on your part",
-              "Modern card-reader machines, no cash handling required",
               "Locally owned and operated — based right here in Maple Ridge",
             ].map((t) => (
               <li key={t} className="flex gap-3 items-start">
