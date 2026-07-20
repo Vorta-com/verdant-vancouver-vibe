@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md border-b shadow-sm">
       <div className="container flex items-center justify-between h-18 py-2">
-        <a href="#" className="flex items-center gap-2">
+        <a href="/" className="flex items-center gap-2" title="Back to all services">
           <img src={logoAsset.url} alt="Cresta Exterior Cleaning" className="h-14 w-auto" />
         </a>
 
