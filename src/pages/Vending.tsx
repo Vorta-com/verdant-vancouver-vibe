@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import vendingHero from "@/assets/vending-hero.jpg";
-import logoAsset from "@/assets/cresta-logo-transparent.png.asset.json";
+import vendingLogo from "@/assets/cresta-vending-logo.png.asset.json";
 
 const Vending = () => {
   return (
@@ -27,8 +27,7 @@ const Vending = () => {
       <header className="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b">
         <div className="container flex items-center justify-between h-18 py-2">
           <Link to="/" className="flex items-center gap-2">
-            <img src={logoAsset.url} alt="Cresta Vending" className="h-12 w-auto" />
-            <span className="hidden sm:inline text-lg font-bold text-foreground">Vending</span>
+            <img src={vendingLogo.url} alt="Cresta Vending — Smart Choices. Better Spaces." className="h-14 w-auto" />
           </Link>
           <div className="flex items-center gap-3">
             <Link
@@ -56,8 +55,8 @@ const Vending = () => {
               Smart healthy vending, <span className="text-accent">right where your people are</span>
             </h1>
             <p className="text-lg md:text-xl opacity-90 mb-8">
-              AI-powered, health-focused vending machines for offices, gyms, and clinics across Maple Ridge and the surrounding area. We install, stock, and maintain every machine at
-              <span className="font-bold text-accent"> NO COST</span> to you.
+              Cresta Vending brings AI-powered, health-focused vending machines to workplaces and wellness spaces across Maple Ridge and the surrounding area. We install, stock, and maintain every machine at
+              <span className="font-bold text-accent"> NO COST</span> to you — offering your staff, members, or patients fresh, functional, and better-for-you food and drink options around the clock.
             </p>
             <div className="flex flex-wrap gap-3">
               <Button size="lg" variant="secondary" asChild>
@@ -99,7 +98,7 @@ const Vending = () => {
             { Icon: Heart, title: "Health-Focused", body: "Better-for-you choices" },
             { Icon: CreditCard, title: "Cashless", body: "Tap, chip, or mobile wallet" },
             { Icon: Handshake, title: "Zero Effort", body: "We handle everything" },
-            { Icon: Clock, title: "24/7 Access", body: "Convenience around the clock" },
+            { Icon: Clock, title: "24/7 Access", body: "Convenience your people appreciate" },
           ].map(({ Icon, title, body }) => (
             <div key={title} className="border rounded-2xl p-6 bg-card text-center shadow-sm">
               <div className="w-12 h-12 rounded-full bg-accent/15 flex items-center justify-center mx-auto mb-3">
@@ -112,8 +111,38 @@ const Vending = () => {
         </div>
       </section>
 
-      {/* How our AI machines work */}
+      {/* Why Cresta Vending */}
       <section className="bg-secondary py-14 md:py-20">
+        <div className="container">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+              Why <span className="text-accent">Cresta</span> Vending?
+            </h2>
+            <p className="text-muted-foreground italic">
+              Smart technology. Healthier choices. Zero effort. That's the Cresta Vending difference.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { Icon: DollarSign, title: "No Cost To You", body: "Zero upfront cost. Zero ongoing hassle." },
+              { Icon: MapPin, title: "Perfect For Any Space", body: "Offices, gyms, and clinics." },
+              { Icon: Heart, title: "Better Choices", body: "Fuel productivity, wellness, and performance." },
+              { Icon: Clock, title: "Open 24/7", body: "Fresh, functional options whenever you need them." },
+            ].map(({ Icon, title, body }) => (
+              <div key={title} className="bg-card border rounded-2xl p-6 text-center shadow-sm">
+                <div className="w-14 h-14 rounded-full border-2 border-accent flex items-center justify-center mx-auto mb-4">
+                  <Icon className="h-6 w-6 text-accent" />
+                </div>
+                <h3 className="font-bold text-foreground mb-2 uppercase text-sm tracking-wide">{title}</h3>
+                <p className="text-muted-foreground text-sm">{body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How our AI machines work */}
+      <section className="py-14 md:py-20">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">How Our AI Vending Machines Work</h2>
@@ -136,6 +165,35 @@ const Vending = () => {
                 <p className="text-muted-foreground text-sm">{body}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Zero Effort */}
+      <section className="bg-secondary py-14 md:py-20">
+        <div className="container max-w-5xl">
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">Zero Effort On Your End</h2>
+            <p className="text-muted-foreground">We handle everything so your team doesn't have to think about it.</p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-4 md:gap-0 rounded-2xl overflow-hidden border shadow-sm bg-card">
+            <div className="bg-primary text-primary-foreground p-5 font-bold text-center">What We Handle</div>
+            <div className="bg-accent text-accent-foreground p-5 font-bold text-center">What You Get</div>
+            {[
+              ["Machine delivery, installation, and setup", "A modern, professional amenity with zero upfront cost"],
+              ["All restocking, rotation, and freshness checks", "Fresh product, always — no expired stock sitting on shelves"],
+              ["Maintenance, repairs, and technical support", "No calls, no tickets, no hassle for your facilities team"],
+              ["Card and mobile payment processing", "No cash handling, no reconciliation, no risk"],
+            ].flatMap(([handle, get], i) => [
+              <div key={`h-${i}`} className="p-5 border-t flex gap-3 items-start">
+                <Truck className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                <span className="text-foreground text-sm">{handle}</span>
+              </div>,
+              <div key={`g-${i}`} className="p-5 border-t md:border-l flex gap-3 items-start bg-secondary/40">
+                <Check className="h-5 w-5 text-accent shrink-0 mt-0.5" />
+                <span className="text-foreground text-sm">{get}</span>
+              </div>,
+            ])}
           </div>
         </div>
       </section>
@@ -233,8 +291,8 @@ const Vending = () => {
             <a href="tel:+17785583384" className="flex items-center gap-3 hover:text-accent">
               <Phone className="h-5 w-5 text-accent" /> (778) 558-3384
             </a>
-            <a href="mailto:crestavending@gmail.com" className="flex items-center gap-3 hover:text-accent break-all">
-              <Mail className="h-5 w-5 text-accent" /> crestavending@gmail.com
+            <a href="mailto:tharaka@crestaexterior.ca" className="flex items-center gap-3 hover:text-accent break-all">
+              <Mail className="h-5 w-5 text-accent" /> tharaka@crestaexterior.ca
             </a>
           </div>
           <div className="mt-8">
