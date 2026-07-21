@@ -10,6 +10,11 @@ import {
   Check,
   MapPin,
   Mail,
+  Cpu,
+  Heart,
+  CreditCard,
+  Clock,
+  Sparkles,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import vendingHero from "@/assets/vending-hero.jpg";
@@ -45,14 +50,14 @@ const Vending = () => {
         <div className="container grid md:grid-cols-2 gap-10 items-center py-16 md:py-24">
           <div>
             <span className="inline-block bg-accent text-accent-foreground text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">
-              Specialists in AI Vending Machines
+              Smart Healthy Vending
             </span>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-              Smart <span className="text-accent">AI vending machines</span> for your space
+              Smart healthy vending, <span className="text-accent">right where your people are</span>
             </h1>
             <p className="text-lg md:text-xl opacity-90 mb-8">
-              We specialize in next-generation <span className="font-bold text-accent">AI-powered vending machines</span> — installed and stocked at
-              <span className="font-bold text-accent"> NO COST</span> to you. Touchscreen ordering, cashless payments, and real-time inventory built in.
+              AI-powered, health-focused vending machines for offices, gyms, and clinics across Maple Ridge and the surrounding area. We install, stock, and maintain every machine at
+              <span className="font-bold text-accent"> NO COST</span> to you.
             </p>
             <div className="flex flex-wrap gap-3">
               <Button size="lg" variant="secondary" asChild>
@@ -86,49 +91,47 @@ const Vending = () => {
         </div>
       </section>
 
-      {/* Two-card promise */}
+      {/* Feature strip */}
       <section className="container py-14 md:py-20">
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="border rounded-2xl p-8 bg-card flex gap-5 items-start shadow-sm">
-            <div className="w-14 h-14 rounded-full bg-accent flex items-center justify-center shrink-0">
-              <DollarSign className="h-7 w-7 text-accent-foreground" />
+        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          {[
+            { Icon: Cpu, title: "AI-Powered", body: "Smart inventory & restocking" },
+            { Icon: Heart, title: "Health-Focused", body: "Better-for-you choices" },
+            { Icon: CreditCard, title: "Cashless", body: "Tap, chip, or mobile wallet" },
+            { Icon: Handshake, title: "Zero Effort", body: "We handle everything" },
+            { Icon: Clock, title: "24/7 Access", body: "Convenience around the clock" },
+          ].map(({ Icon, title, body }) => (
+            <div key={title} className="border rounded-2xl p-6 bg-card text-center shadow-sm">
+              <div className="w-12 h-12 rounded-full bg-accent/15 flex items-center justify-center mx-auto mb-3">
+                <Icon className="h-6 w-6 text-accent" />
+              </div>
+              <h3 className="font-bold text-foreground mb-1">{title}</h3>
+              <p className="text-muted-foreground text-sm">{body}</p>
             </div>
-            <div>
-              <h3 className="text-xl font-bold text-foreground mb-2">$0 Cost to You</h3>
-              <p className="text-muted-foreground">
-                Installation, stocking, and maintenance — all covered by me.
-              </p>
-            </div>
-          </div>
-          <div className="border rounded-2xl p-8 bg-card flex gap-5 items-start shadow-sm">
-            <div className="w-14 h-14 rounded-full bg-accent flex items-center justify-center shrink-0">
-              <Handshake className="h-7 w-7 text-accent-foreground" />
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-foreground mb-2">100% Hands-Off</h3>
-              <p className="text-muted-foreground">
-                I manage restocking, repairs, and cash/card collection. You never lift a finger.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
-      {/* How it works */}
+      {/* How our AI machines work */}
       <section className="bg-secondary py-14 md:py-20">
         <div className="container">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-12">How It Works</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">How Our AI Vending Machines Work</h2>
+            <p className="text-muted-foreground">
+              Each machine is a connected, self-managing retail point built to make healthy options convenient and low-maintenance.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { n: 1, Icon: MessageCircle, title: "Quick Chat", body: "We find the right spot on your property together — takes 5 minutes." },
-              { n: 2, Icon: Truck, title: "Free Install", body: "I deliver, place, and set up the machine at no charge to you." },
-              { n: 3, Icon: Package, title: "I Restock", body: "Regular visits to keep it stocked, clean, and running smoothly." },
-            ].map(({ n, Icon, title, body }) => (
-              <div key={n} className="bg-card rounded-2xl p-8 text-center shadow-sm border">
-                <div className="w-14 h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-xl mx-auto mb-4">
-                  {n}
-                </div>
-                <Icon className="h-8 w-8 text-accent mx-auto mb-3" />
+              { title: "Touchscreen Display", body: "Full nutritional info for every product — calories, allergens, and ingredients at the point of purchase." },
+              { title: "100% Cashless Payment", body: "Tap, chip, or mobile wallet. Your staff never handles cash." },
+              { title: "AI-Driven Restocking", body: "Remote inventory monitoring flags low stock automatically so popular items rarely run out." },
+              { title: "Dynamic Product Selection", body: "Offices lean to sparkling water and protein snacks; gyms to electrolytes and recovery bars. We adjust to real sales data." },
+              { title: "Remote Diagnostics", body: "Most technical issues are caught and resolved before they ever affect your team." },
+              { title: "Zero Effort on Your End", body: "Delivery, installation, restocking, repairs, and payment processing — all handled by us." },
+            ].map(({ title, body }) => (
+              <div key={title} className="bg-card rounded-2xl p-6 shadow-sm border">
+                <Sparkles className="h-6 w-6 text-accent mb-3" />
                 <h3 className="text-lg font-bold text-foreground mb-2">{title}</h3>
                 <p className="text-muted-foreground text-sm">{body}</p>
               </div>
@@ -137,64 +140,101 @@ const Vending = () => {
         </div>
       </section>
 
-      {/* Why + Good fit */}
-      <section className="container py-14 md:py-20 grid md:grid-cols-2 gap-6">
-        <div className="border rounded-2xl overflow-hidden bg-card shadow-sm">
-          <div className="bg-primary text-primary-foreground px-6 py-4">
-            <h3 className="text-xl font-bold">Why Host a Machine?</h3>
-          </div>
-          <ul className="p-6 space-y-3">
-            {[
-              "Smart AI vending machines with touchscreen ordering",
-              "Cashless tap, chip, and mobile-wallet payments built in",
-              "Real-time inventory tracking — never a sold-out shelf",
-              "Zero upfront cost and zero ongoing effort on your part",
-              "Locally owned and operated — based right here in Maple Ridge",
-            ].map((t) => (
-              <li key={t} className="flex gap-3 items-start">
-                <Check className="h-5 w-5 text-accent shrink-0 mt-0.5" />
-                <span className="text-foreground">{t}</span>
-              </li>
-            ))}
-          </ul>
+      {/* What we offer */}
+      <section className="container py-14 md:py-20">
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">Health-Focused Food & Beverages</h2>
+          <p className="text-muted-foreground">
+            Every machine is stocked with better-for-you options from trusted Canadian and BC-based suppliers. We tailor the mix to your location.
+          </p>
         </div>
-        <div className="border rounded-2xl overflow-hidden bg-card shadow-sm">
-          <div className="bg-accent text-accent-foreground px-6 py-4">
-            <h3 className="text-xl font-bold">Good Fit If You Have:</h3>
+        <div className="grid md:grid-cols-3 gap-6">
+          {[
+            {
+              title: "Protein & Performance",
+              items: [
+                "Protein bars (RXBAR, GoMacro, and similar clean brands)",
+                "Jerky — beef, turkey, and plant-based",
+                "Roasted edamame and protein chip alternatives",
+                "Single-serve nut butter packets",
+              ],
+            },
+            {
+              title: "Better-For-You Snacks",
+              items: [
+                "Baked (not fried) chips and veggie crisps",
+                "Air-popped popcorn, light on oil and salt",
+                "Nut and seed mixes, dried fruit",
+                "Lower-sugar granola and snack bars",
+                "Gluten-free and vegan options clearly labelled",
+              ],
+            },
+            {
+              title: "Refreshing Beverages",
+              items: [
+                "Sparkling and still water",
+                "Coconut water and cold-pressed juice",
+                "Kombucha and unsweetened iced tea",
+                "Electrolyte and recovery drinks (Nuun, LMNT)",
+              ],
+            },
+          ].map(({ title, items }) => (
+            <div key={title} className="border rounded-2xl p-6 bg-card shadow-sm">
+              <h3 className="text-lg font-bold text-foreground mb-4">{title}</h3>
+              <ul className="space-y-2">
+                {items.map((it) => (
+                  <li key={it} className="flex gap-2 items-start text-sm">
+                    <Check className="h-4 w-4 text-accent shrink-0 mt-1" />
+                    <span className="text-foreground">{it}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Why it fits */}
+      <section className="bg-secondary py-14 md:py-20">
+        <div className="container">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">A Strong Fit For Your Space</h2>
+            <p className="text-muted-foreground">
+              Health-focused vending is the fastest-growing segment in the industry — driven by demand from exactly the kinds of spaces you run.
+            </p>
           </div>
-          <ul className="p-6 space-y-3">
+          <div className="grid md:grid-cols-3 gap-6">
             {[
-              "A shop, warehouse, or office with regular foot traffic",
-              "Staff or customers who are often on-site for a while",
-              "An unused corner, hallway, or waiting area",
-              "A desire to offer staff or customers a nice, easy perk",
-            ].map((t) => (
-              <li key={t} className="flex gap-3 items-start">
-                <Check className="h-5 w-5 text-accent shrink-0 mt-0.5" />
-                <span className="text-foreground">{t}</span>
-              </li>
+              { title: "Offices", body: "Keeps staff fuelled through the day without a trip off-site — supports wellness initiatives and satisfaction." },
+              { title: "Gyms & Fitness Studios", body: "Members expect recovery-focused options — protein, electrolytes, and clean snacks right after a workout." },
+              { title: "Clinics & Wellness Spaces", body: "A clean, functional vending option reinforces your brand — no sugary snacks sending the wrong message." },
+            ].map(({ title, body }) => (
+              <div key={title} className="bg-card rounded-2xl p-8 shadow-sm border">
+                <h3 className="text-xl font-bold text-foreground mb-3">{title}</h3>
+                <p className="text-muted-foreground">{body}</p>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
 
       {/* Contact */}
       <section id="contact" className="bg-primary text-primary-foreground py-14 md:py-20">
         <div className="container max-w-2xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-3">Let's set it up!</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-3">Let's walk your space</h2>
           <p className="opacity-90 mb-8">
-            A quick call is all it takes to see if a free vending machine is right for your space.
+            We can find the right spot together and typically have a machine installed within a short window of your approval — at no cost or obligation.
           </p>
           <div className="bg-white/10 backdrop-blur rounded-2xl p-8 space-y-4 text-left inline-block">
-            <p className="text-lg font-bold">Tharaka Dissanayake</p>
+            <p className="text-lg font-bold">Cresta Vending</p>
             <p className="flex items-center gap-3">
               <MapPin className="h-5 w-5 text-accent" /> Maple Ridge, BC
             </p>
             <a href="tel:+17785583384" className="flex items-center gap-3 hover:text-accent">
               <Phone className="h-5 w-5 text-accent" /> (778) 558-3384
             </a>
-            <a href="mailto:info@crestaexterior.ca" className="flex items-center gap-3 hover:text-accent break-all">
-              <Mail className="h-5 w-5 text-accent" /> info@crestaexterior.ca
+            <a href="mailto:crestavending@gmail.com" className="flex items-center gap-3 hover:text-accent break-all">
+              <Mail className="h-5 w-5 text-accent" /> crestavending@gmail.com
             </a>
           </div>
           <div className="mt-8">

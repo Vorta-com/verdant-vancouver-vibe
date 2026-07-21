@@ -75,7 +75,7 @@ const Landing = () => (
               <h2 className="text-2xl font-bold text-foreground">Cresta Vending</h2>
             </div>
             <p className="text-muted-foreground mb-4">
-              Specialists in AI-powered vending machines. Free install, fully managed, 100% hands-off.
+              AI-powered, health-focused vending machines for offices, gyms, and clinics. Free install, fully managed, zero effort.
             </p>
             <span className="inline-flex items-center gap-2 text-accent font-semibold group-hover:gap-3 transition-all">
               Learn more <ArrowRight className="h-4 w-4" />
